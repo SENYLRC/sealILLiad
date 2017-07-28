@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>SEAL Catalog</Name>
+  <Author>IDS Project</Author>
+  <Version>0.4</Version>
+  <Active>True</Active>
+  <Type>Addon</Type>
+  <Description>Execute a search of the library's SEAL Web Opac Catalog. Tested on SEAL v18.01.</Description>
+  <Forms>
+    <Form>FormRequest</Form>
+  </Forms>
+  <Settings>
+    <Setting name="AutoSearch" value="true" type="boolean">
+      <Description>Defines whether the search should be automatically performed when the form opens.</Description>
+    </Setting>
+    <Setting name="SEALBaseURL" value="senylrc.indexdata.com" type="string">
+      <Description>The base URL for the SEAL web opac catalog to be searched.  For example, senylrc.indexdata.com </Description>
+    </Setting>
+    <Setting name="CatBrand" value="SEAL" type="string">
+      <Description>The string to be displayed on the Search Tab within ILLiad. This would typically be your catalog's name.</Description>
+    </Setting>
+    <Setting name="UserID" value="yoursealid" type="string">
+      <Description>The UserID for your SEAL account.</Description>
+    </Setting>
+    <Setting name="Password" value="yoursealpassword" type="string">
+      <Description>The Password for your SEAL Account.</Description>
+    </Setting>
+    <Setting name="UseOCLCNum" value="true" type="boolean">
+      <Description>Defines whether the search should use the OCLC Number as a search option. If set to true the system will use The OCLCNumber, if avaliable, as the first search option. If set to false it will use the ISBN/ISSN followed by the contents of the title of a request.</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>SEALCatalog.lua</File>
+  </Files>
+</Configuration>
